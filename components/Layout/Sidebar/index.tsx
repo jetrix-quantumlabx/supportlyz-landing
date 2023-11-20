@@ -11,7 +11,7 @@ import {
   DashboardIcon,
   CogIcon,
 } from '@/components/UI/Icons'
-import { SidebarItem } from './SidebarItem'
+import { WrapperItem } from './WrapperItem'
 
 const OPTIONS = [
   {
@@ -62,20 +62,33 @@ const OPTIONS = [
 ]
 
 export const Sidebar = () => {
-  const [activeLabel, setActiveLabel] = useState<string>('dashboard')
+  const [activeItem, setActiveItem] = useState<string>('dashboard')
 
   return (
     <div className="bg-geyser-100 w-28">
-      {OPTIONS.map((item, index) => (
-        <SidebarItem
+      {OPTIONS.slice(0, 7).map((item, index) => (
+        <WrapperItem
           key={index}
           label={item.label}
           icon={item.icon}
           link={item.link}
-          activeLabel={activeLabel}
-          setActiveLabel={setActiveLabel}
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
         />
       ))}
+
+      <div className="mt-20">
+        {OPTIONS.slice(7, 9).map((item, index) => (
+          <WrapperItem
+            key={index}
+            label={item.label}
+            icon={item.icon}
+            link={item.link}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+          />
+        ))}
+      </div>
     </div>
   )
 }

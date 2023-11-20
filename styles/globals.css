@@ -38,9 +38,10 @@ body {
 
 /************* Sidebar ***********/
 .sidebar-item {
-  @apply flex items-center justify-center w-[90%] relative h-28 text-emerald-500 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
+  @apply flex items-center justify-center w-[90%] relative h-28 rounded-e-3xl overflow-hidden cursor-pointer transition before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4
 }
 
-.sidebar-item.is-active {
+/* This class is used to visually highlight the sidebar item that the user has currently selected. */
+.sidebar-item-is-active {
   @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4 !text-white
 }

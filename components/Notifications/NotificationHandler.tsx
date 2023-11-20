@@ -18,7 +18,7 @@ export const NotificationHandler = ({
       <ButtonIcon onClick={onClick}>
         <BellIcon />
       </ButtonIcon>
-      <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white rounded-full bg-emerald-700 -top-1 -right-1">
+      <span className="absolute flex items-center justify-center w-5 h-5 text-xs text-white rounded-full bg-emerald-900 -top-1 -right-1">
         {lenght}
       </span>
     </div>
