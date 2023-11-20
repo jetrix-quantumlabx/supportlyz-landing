@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 interface ChatProps {
   width?: number;
@@ -19,4 +19,4 @@ export const Chat = ({ width, height, ...props }: ChatProps) => (
       clipRule="evenodd"
     />
   </svg>
-);
+)

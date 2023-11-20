@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import React from "react";
-import { SearchIcon } from "@/components/UI/Icons";
+import React from "react"
+import { SearchIcon } from "@/components/UI/Icons"
 
 export const Search = () => {
   return (
@@ -15,5 +15,5 @@ export const Search = () => {
         className="h-full w-full bg-transparent outline-none text-black px-4 placeholder-gray-400"
       />
     </div>
-  );
-};
+  )
+}

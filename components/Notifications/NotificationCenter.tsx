@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import React from "react";
-import { CogIcon } from "@/components/UI/Icons";
-import { Notification } from "./Notification";
-import { INotification } from "@/types";
+import React from "react"
+import { CogIcon } from "@/components/UI/Icons"
+import { Notification } from "./Notification"
+import { INotification } from "@/types"
 
 interface NotificationCenterProps {
   open: boolean;
@@ -14,7 +14,7 @@ export const NotificationCenter = ({
   open,
   notifications,
 }: NotificationCenterProps) => {
-  const openClass = open ? "opacity-1" : "opacity-0";
+  const openClass = open ? "opacity-1" : "opacity-0"
 
   return (
     <div
@@ -34,5 +34,5 @@ export const NotificationCenter = ({
         }
       </div>
     </div>
-  );
-};
+  )
+}

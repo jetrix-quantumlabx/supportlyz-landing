@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import React, { memo } from "react";
+import React, { memo } from "react"
 
 interface ButtonIconProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ export const ButtonIcon = ({
   children,
   onClick,
 }: ButtonIconProps) => {
-  return <button onClick={onClick} className="button-icon">{children}</button>;
-};
+  return <button onClick={onClick} className="button-icon">{children}</button>
+}
 
 

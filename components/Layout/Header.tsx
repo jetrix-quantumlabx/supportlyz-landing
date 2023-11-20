@@ -1,15 +1,15 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 import {
   MagnetIcon,
   EarphonesIcon,
-} from "@/components/UI/Icons";
-import { ButtonIcon } from "@/components/UI/Buttons/ButtonIcon";
-import { Notifications } from "@/components/Notifications";
-import { Search } from "@/components/Search";
-import { Account } from "@/components/Account";
+} from "@/components/UI/Icons"
+import { ButtonIcon } from "@/components/UI/Buttons/ButtonIcon"
+import { Notifications } from "@/components/Notifications"
+import { Search } from "@/components/Search"
+import { Account } from "@/components/Account"
 
 const Header = () => {
   return (
@@ -31,7 +31,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

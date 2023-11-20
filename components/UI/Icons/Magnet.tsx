@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 interface MagnetProps {
   width?: number;
@@ -25,4 +25,4 @@ export const Magnet = ({ width, height, ...props }: MagnetProps) => (
       fill="CurrentColor"
     />
   </svg>
-);
+)

@@ -1,8 +1,8 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { BellIcon } from "@/components/UI/Icons";
-import { ButtonIcon } from "@/components/UI/Buttons/ButtonIcon";
+import React, { useState } from "react"
+import { BellIcon } from "@/components/UI/Icons"
+import { ButtonIcon } from "@/components/UI/Buttons/ButtonIcon"
 
 interface NotificationHandlerProps {
   onClick: () => void;
@@ -22,5 +22,5 @@ export const NotificationHandler = ({
         {lenght}
       </span>
     </div>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 interface BellProps {
   width?: number;
@@ -19,4 +19,4 @@ export const Bell = ({ width, height, ...props }: BellProps) => (
       clipRule="evenodd"
     />
   </svg>
-);
+)

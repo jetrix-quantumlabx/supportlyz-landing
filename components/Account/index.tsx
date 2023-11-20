@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 import {
   ChatIcon,
   ChevronIcon,
-} from "@/components/UI/Icons";
+} from "@/components/UI/Icons"
 
 export const Account = () => {
   return (
@@ -30,5 +30,5 @@ export const Account = () => {
         <ChevronIcon />
       </span>
     </div>
-  );
-};
+  )
+}

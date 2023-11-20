@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
-import { BellIcon } from "@/components/UI/Icons";
-import { INotification } from "@/types";
+import React from "react"
+import Image from "next/image"
+import { BellIcon } from "@/components/UI/Icons"
+import { INotification } from "@/types"
 
 interface NotificationProps {
   notification: INotification;
@@ -31,5 +31,5 @@ export const Notification = ({ notification }: NotificationProps) => {
         <BellIcon />
       </div>
     </div>
-  );
-};
+  )
+}

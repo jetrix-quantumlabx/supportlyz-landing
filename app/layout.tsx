@@ -6,7 +6,7 @@ const fira = Fira_Sans({
   style: "normal",
   weight: "400",
   subsets: ["latin-ext"],
-});
+})
 
 export const metadata: Metadata = {
   title: 'Supportlyz',
@@ -22,5 +22,5 @@ export default function RootLayout({
     <html lang="en">
       <body className={fira.className}>{children}</body>
     </html>
-  );
+  )
 }

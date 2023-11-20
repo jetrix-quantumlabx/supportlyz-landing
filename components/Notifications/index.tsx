@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { NotificationHandler } from "./NotificationHandler";
-import { NotificationCenter } from "./NotificationCenter";
-import { notifications } from "@/data";
+import React, { useState } from "react"
+import { NotificationHandler } from "./NotificationHandler"
+import { NotificationCenter } from "./NotificationCenter"
+import { notifications } from "@/data"
 
 interface NotificationsProps {}
 
@@ -20,5 +20,5 @@ export const Notifications = ({}: NotificationsProps) => {
       />
       <NotificationCenter open={open} notifications={notifications}/>
     </div>
-  );
-};
+  )
+}

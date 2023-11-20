@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 interface ChevronProps {
   width?: number;
@@ -19,4 +19,4 @@ export const Chevron = ({ width, height, ...props }: ChevronProps) => (
       clipRule="evenodd"
     />
   </svg>
-);
+)

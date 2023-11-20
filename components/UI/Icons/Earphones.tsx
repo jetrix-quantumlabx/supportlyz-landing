@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 interface EarphonesProps {
   width?: number;
@@ -25,4 +25,4 @@ export const Earphones = ({ width, height, ...props }: EarphonesProps) => (
       clipRule="evenodd"
     />
   </svg>
-);
+)
