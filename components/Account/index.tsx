@@ -8,8 +8,9 @@ import {
 } from "@/components/UI/Icons"
 
 export const Account = () => {
+
   return (
-    <div className="flex items-center gap-3 p-2 transition delay-100 bg-white rounded-full cursor-pointer hover:bg-emerald-500 shadow-geyser-10 hover:shadow-emerald-40 group">
+    <div className="account">
       <Image
         src="/static/images/boy.png"
         alt="boy"

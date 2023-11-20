@@ -28,6 +28,11 @@
     "@typescript-eslint/no-this-alias": "off",
     "object-shorthand": ["off", "always"],
     "semi": ["error", "never"],
+    "import/no-default-export": "error",
+    "react/no-multi-comp": ["error", { "ignoreStateless": false }],
+    "no-unused-vars": "error",
+    "no-console": "error",
+    "max-len": ["error", { "code": 170 }],
     "prettier/prettier": 0,
     "no-restricted-imports": [
       "error",
