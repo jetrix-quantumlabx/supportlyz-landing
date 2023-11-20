@@ -11,7 +11,10 @@ import { Notifications } from "@/components/Notifications"
 import { Search } from "@/components/Search"
 import { Account } from "@/components/Account"
 
-const Header = () => {
+export const Header = () => {
+
+  const handleOption = () => {}
+
   return (
     <div className="flex items-center p-6 bg-geyser-100">
       <div className="flex items-center justify-between w-full">
@@ -20,10 +23,10 @@ const Header = () => {
         </div>
         <Search />
         <div className="relative flex items-center gap-5">
-          <ButtonIcon onClick={() => console.log()}>
+          <ButtonIcon onClick={handleOption}>
             <MagnetIcon />
           </ButtonIcon>
-          <ButtonIcon onClick={() => console.log()}>
+          <ButtonIcon onClick={handleOption}>
             <EarphonesIcon />
           </ButtonIcon>
           <Notifications />
@@ -33,5 +36,3 @@ const Header = () => {
     </div>
   )
 }
-
-export default Header

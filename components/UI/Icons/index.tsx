@@ -3,5 +3,11 @@ export { Bell as BellIcon } from "./Bell"
 export { Earphones as EarphonesIcon } from "./Earphones"
 export { Cog as CogIcon } from "./Cog"
 export { Search as SearchIcon } from "./Search"
-export { Chat as ChatIcon } from "./Chat"
+export { Message as MessageIcon } from "./Message"
 export { Chevron as ChevronIcon } from "./Chevron"
+export { Home as HomeIcon } from './Home'
+export { Robot as RobotIcon } from './Robot'
+export { Chat as ChatIcon } from './Chat'
+export { TrayMessage as TrayMessageIcon } from './TrayMessage'
+export { Users as UsersIcon } from './Users'
+export { Dashboard as DashboardIcon } from './Dashboard'

@@ -1,18 +1,12 @@
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { Fira_Sans } from 'next/font/google'
-
-const fira = Fira_Sans({
-  style: "normal",
-  weight: "400",
-  subsets: ["latin-ext"],
-})
 
 export const metadata: Metadata = {
   title: 'Supportlyz',
   description: 'AI Support for your business',
 }
 
+// eslint-disable-next-line import/no-default-export
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fira.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

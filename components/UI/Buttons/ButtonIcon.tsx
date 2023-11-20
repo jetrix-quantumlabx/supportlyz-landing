@@ -1,6 +1,6 @@
 "use client"
 
-import React, { memo } from "react"
+import React from "react"
 
 interface ButtonIconProps {
   children: React.ReactNode;

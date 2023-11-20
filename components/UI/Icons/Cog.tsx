@@ -1,14 +1,12 @@
+/* eslint-disable max-len */
 import * as React from "react"
+import { IIcon } from '@/types/icons'
 
-interface CogProps {
-  width?: number;
-  height?: number;
-}
-export const Cog = ({ width, height, ...props }: CogProps) => (
+export const Cog = ({ width, height, ...props }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={width || "1em"}
-    height={height || "1em"}
+    width={width || '1em'}
+    height={height || '1em'}
     viewBox={`0 0 ${width || 16} ${height || 16}`}
     {...props}
   >

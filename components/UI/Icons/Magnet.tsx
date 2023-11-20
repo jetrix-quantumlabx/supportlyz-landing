@@ -1,14 +1,12 @@
+/* eslint-disable max-len */
 import * as React from "react"
+import { IIcon } from '@/types/icons'
 
-interface MagnetProps {
-  width?: number;
-  height?: number;
-}
-export const Magnet = ({ width, height, ...props }: MagnetProps) => (
+export const Magnet = ({ width, height, ...props }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={width || "1em"}
-    height={height || "1em"}
+    width={width || '1em'}
+    height={height || '1em'}
     viewBox={`0 0 ${width || 20} ${height || 20}`}
     {...props}
   >

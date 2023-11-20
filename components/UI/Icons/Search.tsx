@@ -1,10 +1,8 @@
+/* eslint-disable max-len */
 import * as React from "react"
+import { IIcon } from '@/types/icons'
 
-interface SearchProps {
-  width?: number;
-  height?: number;
-}
-export const Search = ({ width, height, ...props }: SearchProps) => (
+export const Search = ({ width, height, ...props }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width || "1em"}

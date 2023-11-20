@@ -20,7 +20,6 @@
     "@typescript-eslint/prefer-as-const": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -32,7 +31,9 @@
     "react/no-multi-comp": ["error", { "ignoreStateless": false }],
     "no-unused-vars": "error",
     "no-console": "error",
-    "max-len": ["error", { "code": 170 }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "max-len": ["error", { "code": 200 }],
+    "object-curly-spacing": ["error", "always"],
     "prettier/prettier": 0,
     "no-restricted-imports": [
       "error",

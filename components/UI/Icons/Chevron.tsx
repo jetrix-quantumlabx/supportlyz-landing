@@ -1,14 +1,11 @@
 import * as React from "react"
+import { IIcon } from '@/types/icons'
 
-interface ChevronProps {
-  width?: number;
-  height?: number;
-}
-export const Chevron = ({ width, height, ...props }: ChevronProps) => (
+export const Chevron = ({ width, height, ...props }: IIcon) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={width || "1em"}
-    height={height || "1em"}
+    width={width || '1em'}
+    height={height || '1em'}
     viewBox={`0 0 ${width || 11} ${height || 7}`}
     {...props}
   >
