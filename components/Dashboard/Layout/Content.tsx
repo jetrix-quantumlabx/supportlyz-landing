@@ -1,14 +1,13 @@
 'use client'
 
 import React from 'react'
-// import Image from 'next/image'
 import { CHATS } from '@/data/chats'
-import { Statistics } from '@/components/Statistics'
-import { PaymentNotification } from '@/components/PaymentNotification'
+import { Statistics } from '@/components/Dashboard/Statistics'
+import { PaymentNotification } from '@/components/Dashboard/PaymentNotification'
 import { HomeIcon } from '@/components/UI/Icons'
-import { RecentChats } from '../RecentChats'
-import { Integration } from '../Integration'
-import { SetUpProgress } from '../SetUpProgress'
+import { RecentChats } from '@/components/Dashboard/RecentChats'
+import { Integration } from '@/components/Dashboard/Integration'
+import { SetUpProgress } from '@/components/Dashboard/SetUpProgress'
 
 
 export const Content = () => {

@@ -7,9 +7,9 @@ import {
   EarphonesIcon,
 } from "@/components/UI/Icons"
 import { ButtonIcon } from "@/components/UI/Buttons/ButtonIcon"
-import { Notifications } from "@/components/Notifications"
-import { Search } from "@/components/Search"
-import { Account } from "@/components/Account"
+import { Notifications } from "@/components/Dashboard/Notifications"
+import { Search } from "@/components/Dashboard/Search"
+import { Account } from "@/components/Dashboard/Account"
 
 export const Header = () => {
 
