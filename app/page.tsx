@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <main>
-      home
+      <h1>Next.js + TypeScript</h1>
     </main>
   )
 }
