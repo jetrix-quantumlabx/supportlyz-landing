@@ -1,12 +1,16 @@
+/* eslint-disable import/no-default-export */
+import { Content } from '@/components/Layout/Content'
 import { Header } from '@/components/Layout/Header'
 import { Sidebar } from '@/components/Layout/Sidebar'
 
-// eslint-disable-next-line import/no-default-export
 export default function Home() {
   return (
     <main>
       <Header />
-      <Sidebar />
+      <div className="flex">
+        <Sidebar />
+        <Content />
+      </div>
     </main>
   )
 }

@@ -23,7 +23,7 @@ export const Notification = ({ notification: { name, code } }: NotificationProps
         <h5 className="text-xs text-black">
           <b>{name}</b> sent you a message in the chat <b>#{code}</b>
         </h5>
-        <p className="text-xs text-geyser-400">2 minutes ago</p>
+        <p className="text-xs text-gray-400">2 minutes ago</p>
       </div>
       <div className="text-sm text-emerald-500">
         <BellIcon />

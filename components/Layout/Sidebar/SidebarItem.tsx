@@ -8,7 +8,7 @@ export const SidebarItem = ({ icon, label, activeItem }: ISidebarItem) => {
   const sidebarItemClass = clsx({
     'sidebar-item group': true,
     'sidebar-item-is-active': activeItem === label,
-    'text-geyser-400': label === 'settings' || label === 'integrations',
+    'text-gray-400': label === 'settings' || label === 'integrations',
     'text-emerald-500': label !== 'settings' && label !== 'integrations',
   })
 

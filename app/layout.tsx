@@ -1,3 +1,4 @@
+/* eslint-disable import/no-default-export */
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 
@@ -6,7 +7,6 @@ export const metadata: Metadata = {
   description: 'AI Support for your business',
 }
 
-// eslint-disable-next-line import/no-default-export
 export default function RootLayout({
   children,
 }: {

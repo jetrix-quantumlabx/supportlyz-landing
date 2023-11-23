@@ -22,7 +22,7 @@ export const NotificationCenter = ({
     >
       <div className="flex items-center justify-between mb-4">
         <b>Notifications Center</b>
-        <div className="text-geyser-400 cursor-pointer">
+        <div className="text-gray-400 cursor-pointer">
           <CogIcon />
         </div>
       </div>

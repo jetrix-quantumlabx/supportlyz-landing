@@ -45,3 +45,20 @@ body {
 .sidebar-item-is-active {
   @apply before:translate-x-0 before:content-[''] before:absolute before:transition before:bg-gradient-to-b from-emerald-500 to-[#29C1AF] before:border-emerald-700 before:border-l-4 !text-white
 }
+
+/************* Statistics ***********/
+.statistics {
+  @apply bg-white bg-opacity-50 rounded-3xl h-[110px] w-4/5 cursor-pointer transition relative overflow-hidden before:h-full before:w-full before:-translate-x-full hover:before:translate-x-0 before:content-[''] before:absolute before:z-10 before:transition before:bg-emerald-500 before:duration-500
+}
+
+
+/************* ScrollBar ***********/
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
