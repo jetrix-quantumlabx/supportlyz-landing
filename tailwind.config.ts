@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        leap: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+          },
+          '50%': {
+            transform: 'translateY(5%)',
+          },
+        },
+      },
+      animation: {
+        'spin-slow': 'spin 25s linear infinite',
+        'bounce-slow': 'leap 8s linear infinite',
+      },
       colors: {
         geyser: {
           '100': '#EDF2F5',
@@ -60,6 +74,15 @@ const config: Config = {
         'geyser-20': '0 10px 20px rgba(104, 134, 193, 0.20)',
         'emerald-40': '0 10px 20px rgba(42, 200, 112, 0.4)',
         'emerald-50': '0 10px 20px rgba(42, 200, 112, 0.5)',
+      },
+    },
+    container: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1740px',
       },
     },
   },
