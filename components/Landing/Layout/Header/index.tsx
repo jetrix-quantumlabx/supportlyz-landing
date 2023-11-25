@@ -4,13 +4,13 @@ import React from 'react'
 import { Navbar } from '@/components/Landing/Navbar'
 import { Button } from '@/components/Landing/Button'
 import { Laptop } from './Laptop'
-import { Shape } from './Shape'
+import { AnimateShape } from '@/components/Landing/AnimateShape'
 import { ShapesGroup } from './ShapesGroup'
 
 export const Header = () => {
   return (
     <div className="bg-elf-green-700 relative">
-      <Shape />
+      <AnimateShape />
       <Navbar />
       <div className="relative overflow-hidden">
         <ShapesGroup />
