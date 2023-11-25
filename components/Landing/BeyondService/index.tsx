@@ -2,11 +2,13 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { AnimateShape } from '@/components/Landing/AnimateShape'
 
 export const BeyondService = () => {
   return (
     <div className="w-full h-[845px] bg-elf-green-700 relative mb-[500px]">
-      <span className="absolute top-0 -left-[260px] w-[1080px] animate-bounce-slow">
+      <AnimateShape />
+      <span className="absolute top-0 -left-[260px] w-[1080px] animate-bounce-slow z-10">
         <Image
           src="/static/images/beyond-service.svg"
           alt="beyond-service"

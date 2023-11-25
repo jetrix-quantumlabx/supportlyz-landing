@@ -6,9 +6,6 @@ import Image from 'next/image'
 export const SeamlessIntegration = () => {
   return (
     <div className="flex justify-between items-center gap-20 relative">
-      <span className="absolute w-[450px] h-[660px] -right-[380px] z-10 rotate-[206deg] -top-[17rem]">
-        <Image src="/static/images/shape-3.svg" alt="shape" width={640} height={657} />
-      </span>
       <div className="w-3/6 flex justify-start">
         <span className="w-[100%] block">
           <Image
