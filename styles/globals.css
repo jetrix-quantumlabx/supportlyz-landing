@@ -4,10 +4,9 @@
 
 @font-face {
   font-family: "TT Firs Neue Trial Var Roman";
-  src: url("../public/static/fonts/tt-firs-neue-trial-var-roman.ttf")
-    format("truetype");
+  src: url("../public/static/fonts/tt-firs-neue-trial-var-roman.ttf") format("truetype");
   font-display: swap;
-  font-weight: 400;
+  font-weight: 100 900;
 }
 
 body {
@@ -23,10 +22,24 @@ body {
   @apply flex items-center justify-center text-center transition delay-100 bg-white rounded-full cursor-pointer text-emerald-500 hover:bg-emerald-500 hover:text-white w-14 h-14 shadow-geyser-10 hover:shadow-emerald-40 text-2xl
 }
 
+.btn {
+  @apply rounded-full cursor-pointer px-4 py-2 justify-center items-center inline-flex gap-2.5 transition-colors text-white hover:bg-opacity-80 active:bg-opacity-50
+}
+
+.btn.btn-primary {
+  @apply bg-malachite-500 hover:bg-emerald-500
+}
+
+.btn-outline-primary {
+  @apply border-2 border-malachite-500 hover:border-opacity-0 hover:bg-opacity-100 hover:bg-emerald-500 active:border-opacity-0 active:bg-emerald-500 active:bg-opacity-50
+}
+
+
 /************* Search ***********/
 .search {
   @apply relative w-2/5 bg-white rounded-full h-14 flex items-center overflow-hidden
 }
+
 .search-icon {
   @apply w-16 relative flex items-center justify-center text-xl text-emerald-500 after:content-[''] after:absolute after:-top-1 after:right-0 after:w-px after:h-7 after:z-20 after:bg-emerald-200
 }
@@ -61,4 +74,8 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+}
+
+.container {
+  @apply max-w-[1740px] mx-auto px-2.5
 }
