@@ -4,7 +4,7 @@ import React from 'react'
 import { Navbar } from '@/components/Landing/Navbar'
 import { Button } from '@/components/Landing/Button'
 import { Laptop } from './Laptop'
-import { AnimateShape } from '@/components/Landing/AnimateShape'
+import { AnimateShape } from '@/components/Landing/ShapeAnimate'
 import { ShapesGroup } from './ShapesGroup'
 
 export const Header = () => {
