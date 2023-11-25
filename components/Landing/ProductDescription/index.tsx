@@ -24,6 +24,9 @@ export const ProductDescription = () => {
         <YourBrands />
         <AI />
       </div>
+      <span className="absolute w-[480px] h-[660px] -right-[300px] z-10 rotate-[206deg] top-[800px]">
+        <Image src="/static/images/shape-3.svg" alt="shape" width={640} height={657} />
+      </span>
     </div>
   )
 }
