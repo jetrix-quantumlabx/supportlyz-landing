@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        leap: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+          },
+          '50%': {
+            transform: 'translateY(5%)',
+          },
+        },
+      },
+      animation: {
+        'spin-slow': 'spin 25s linear infinite',
+        'bounce-slow': 'leap 8s linear infinite',
+      },
       colors: {
         geyser: {
           '100': '#EDF2F5',
@@ -156,6 +170,15 @@ const config: Config = {
       gridTemplateColumns: {
         'benefits-experience': '56.97674418604651% auto',
       }
+    },
+    container: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1740px',
+      },
     },
   },
   plugins: [],
