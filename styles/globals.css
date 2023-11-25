@@ -7,7 +7,7 @@
   src: url("../public/static/fonts/tt-firs-neue-trial-var-roman.ttf")
     format("truetype");
   font-display: swap;
-  font-weight: 400;
+  font-weight: 100 300 500 600 900;
 }
 
 body {
