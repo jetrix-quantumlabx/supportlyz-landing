@@ -36,10 +36,10 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
         />
       </button>
 
-      <p className={`overflow-hidden transition-all ${isOpen ? 'max-h-[150px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`overflow-hidden transition-all ${isOpen ? 'max-h-[150px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mb-6 mt-7 h-2 w-1/3 rounded-3xl bg-malachite-500"></div>
-        <div className="text-base leading-normal">{answer}</div>
-      </p>
+        <p className="text-base leading-normal">{answer}</p>
+      </div>
     </div>
   )
 }
