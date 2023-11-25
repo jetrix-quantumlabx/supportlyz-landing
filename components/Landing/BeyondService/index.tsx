@@ -8,6 +8,9 @@ export const BeyondService = () => {
   return (
     <div className="w-full h-[845px] bg-elf-green-700 relative mb-[219px]">
       <AnimateShape />
+      <span className="absolute w-[1050px] h-100% -left-[450px] -top-[200px] z-10">
+        <Image src="/static/images/shape-2.svg" alt="shape" width={1000} height={600} className="h-full w-full" />
+      </span>
       <span className="absolute top-0 -left-[260px] w-[1080px] animate-bounce-slow z-10">
         <Image
           src="/static/images/beyond-service.svg"
