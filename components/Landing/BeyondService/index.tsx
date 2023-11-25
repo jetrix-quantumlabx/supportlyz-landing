@@ -6,7 +6,7 @@ import { AnimateShape } from '@/components/Landing/AnimateShape'
 
 export const BeyondService = () => {
   return (
-    <div className="w-full h-[845px] bg-elf-green-700 relative mb-[500px]">
+    <div className="w-full h-[845px] bg-elf-green-700 relative mb-[219px]">
       <AnimateShape />
       <span className="absolute top-0 -left-[260px] w-[1080px] animate-bounce-slow z-10">
         <Image
