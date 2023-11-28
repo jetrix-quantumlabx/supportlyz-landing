@@ -169,6 +169,12 @@ const config: Config = {
       },
       gridTemplateColumns: {
         'benefits-experience': '56.97674418604651% auto',
+      },
+      gridTemplateRows: {
+        'benefits-experience-mobile': '542px 200px 200px',
+      },
+      screens: {
+        xxs: "320px",
       }
     },
     container: {

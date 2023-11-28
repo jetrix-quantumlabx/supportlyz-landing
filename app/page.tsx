@@ -21,12 +21,12 @@ export default function Home() {
       <Header />
       <ProductDescription />
       <BeyondService />
-      <SupportlyzIntegrationSection className="mb-[205px]" />
-      <OurCustomersReviewSection className="mb-[66px]" />
-      <OurTeamReviewSection className="mb-[200px]" />
-      <FAQsSection className="mb-[200px]" />
-      <PricesAndPlans className="mb-[200px]" />
-      <BenefitsExperienceSection className="mb-[200px]" />
+      <SupportlyzIntegrationSection className="mb-20 md:mb-[205px]" />
+      <OurCustomersReviewSection className="mb-8 md:mb-[66px]" />
+      <OurTeamReviewSection className="mb-20 md:mb-[200px]" />
+      <FAQsSection className="mb-20 md:mb-[200px]" />
+      <PricesAndPlans className="mb-20 md:mb-[200px]" />
+      <BenefitsExperienceSection className="mb-[100px] md:mb-[200px]" />
       <Footer />
     </main>
   )
