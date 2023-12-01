@@ -22,11 +22,9 @@ export const YourBrands = () => {
         </p>
       </div>
 
-      <div className="md:w-full md:max-w-[715px] flex justify-center md:justify-end">
-        <span className="block">
-          {/* <Image src="/static/images/social.svg" alt="chat" width={715} height={714} className="w-full h-full" /> */}
+      <div className="md:w-full md:max-w-[754px] flex justify-center md:justify-end relative">
+          <div className='w-[38.46%] pt-[38.46%] rounded-full absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 border-[0.624px] border-white shadow-social-center transition-[border] hover:border-[5px] hover:shadow-customer-review box-content duration-500'></div>
           <Lottie animationData={SocialMediaAnimation} loop={true} />
-        </span>
       </div>
     </div>
   )
