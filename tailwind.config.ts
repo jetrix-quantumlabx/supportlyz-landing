@@ -149,6 +149,7 @@ const config: Config = {
         'geyser-20': '0 10px 20px rgba(104, 134, 193, 0.20)',
         'emerald-40': '0 10px 20px rgba(42, 200, 112, 0.4)',
         'emerald-50': '0 10px 20px rgba(42, 200, 112, 0.5)',
+        'social-center': '0px 1.412px 3.321px 0px rgba(0, 0, 0, 0.04), 0px 4.741px 11.156px 0px rgba(0, 0, 0, 0.05)',
       },
       letterSpacing: {
         '0.1': '0.1px',

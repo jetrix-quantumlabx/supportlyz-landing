@@ -31,7 +31,7 @@ body {
 }
 
 .btn.btn-primary {
-  @apply bg-malachite-500 hover:bg-emerald-500;
+  @apply bg-emerald-500 hover:bg-emerald-500;
 }
 
 .btn-outline-primary {
