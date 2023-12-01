@@ -4,7 +4,7 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable import/no-default-export */
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 
 import { Swiper as SwiperType } from 'swiper'
@@ -50,24 +50,24 @@ const CustomerCard = ({ data }: { data: ICustomerReview }) => {
           />
         </div>
 
-        <div className="text-xs md:text-base font-normal tracking-[1.466px] md:tracking-5 opacity-70 mb-4 md:mb-3 leading-normal">
+        <div className="text-xs md:text-sm font-normal tracking-[1.466px] md:tracking-5 opacity-70 mb-4 md:mb-7 leading-normal">
           <div>{name}</div>
           {job && <div>{job}</div>}
         </div>
 
-        <div className="text-xs md:text-2xl font-semibold tracking-[0.029px] md:trakink-0.1 mb-4 md:mb-3 relative leading-normal">
+        <div className="text-xs md:text-lg font-semibold tracking-[0.029px] md:trakink-0.1 mb-4 relative leading-normal">
           &quot;{title}&quot;
         </div>
 
-        <div className="h-[2px] md:h-2 w-[84px] md:w-28 rounded-3xl bg-malachite-500 mb-4 md:mb-3"></div>
+        <div className="h-[2px] md:h-2 w-[84px] md:w-28 rounded-3xl bg-malachite-500 mb-4"></div>
 
-        <p className="text-xs md:text-base font-medium leading-normal md:tracking-0.1 md:min-h-[182px]">{review}</p>
+        <p className="text-xs md:text-sm font-medium md:font-normal leading-normal md:tracking-0.1 md:min-h-[182px]">{review}</p>
       </div>
 
       <div className="md:text-right">
-        <a href="#" className="btn btn-outline-primary h-8 md:h-10 flex-shrink-0 text-xs md:text-base">
+        <a href="#" className="btn btn-outline-primary h-8 md:h-10 flex-shrink-0 text-xs md:text-sm">
           <span>Source</span>
-          <ArrowIcon width={isMobile ? 20 : 24} height={isMobile ? 20 : 24} />
+          <ArrowIcon className='text-[20px]' />
         </a>
       </div>
     </div>
@@ -78,10 +78,25 @@ const CustomerCarrousel = ({ reviews }: { reviews: Array<ICustomerReview> }) => 
   const isMobile = useIsMobile()
   const [activeIndex, setActiveIndex] = useState<number>(0)
   const [swiperWidth, setSwiperWidth] = useState<number>(0)
-  const [slides, setSlides] = useState<Array<ICustomerReview>>([])
+  // const [slides, setSlides] = useState<Array<ICustomerReview>>([])
   const [customerReviewWidth, setCustomerReviewWidth] = useState<number>(0)
 
   const swiperRef = useRef<SwiperType>()
+
+  const slides = useMemo(() => {
+    const slidesPerView = Math.floor(swiperWidth / customerReviewWidth)
+    const tempSlides: Array<ICustomerReview> = JSON.parse(JSON.stringify(reviews))
+
+    if (slidesPerView * 2 > tempSlides.length) {
+      const maxItemsToAdd = slidesPerView * 2 - tempSlides.length
+
+      for (let i = 0; i < maxItemsToAdd; i++) {
+        tempSlides.push(tempSlides[i])
+      }
+    }
+
+    return tempSlides
+  }, [swiperWidth, reviews, customerReviewWidth])
 
   useEffect(() => {
     const handleResize = () => {
@@ -105,24 +120,24 @@ const CustomerCarrousel = ({ reviews }: { reviews: Array<ICustomerReview> }) => 
     }
   }, [isMobile])
 
-  useEffect(() => {
-    if (swiperWidth) {
-      const slidesPerView = Math.floor(swiperWidth / customerReviewWidth)
-      const tempSlides: Array<ICustomerReview> = JSON.parse(JSON.stringify(reviews))
+  // useEffect(() => {
+  //   if (swiperWidth) {
+  //     const slidesPerView = Math.floor(swiperWidth / customerReviewWidth)
+  //     const tempSlides: Array<ICustomerReview> = JSON.parse(JSON.stringify(reviews))
 
-      if (slidesPerView * 2 > tempSlides.length) {
-        const maxItemsToAdd = slidesPerView * 2 - tempSlides.length
+  //     if (slidesPerView * 2 > tempSlides.length) {
+  //       const maxItemsToAdd = slidesPerView * 2 - tempSlides.length
 
-        for (let i = 0; i < maxItemsToAdd; i++) {
-          tempSlides.push(tempSlides[i])
-        }
-      }
+  //       for (let i = 0; i < maxItemsToAdd; i++) {
+  //         tempSlides.push(tempSlides[i])
+  //       }
+  //     }
 
-      setSlides(tempSlides)
+  //     setSlides(tempSlides)
 
-      swiperRef.current?.update()
-    }
-  }, [swiperWidth, reviews, customerReviewWidth])
+  //     swiperRef.current?.update()
+  //   }
+  // }, [swiperWidth, reviews, customerReviewWidth])
 
   return (
     <div>
@@ -146,7 +161,7 @@ const CustomerCarrousel = ({ reviews }: { reviews: Array<ICustomerReview> }) => 
       </Swiper>
 
       <SwiperPagination
-        className="mx-auto mt-6 md:mt-24 hidden md:block"
+        className="mx-auto mt-6 md:mt-20 hidden md:block"
         count={reviews.length}
         activeIndex={activeIndex}
         onClick={(index: number) => {
@@ -161,7 +176,7 @@ export default function OurCustomersReviewSection({ className = '' }: { classNam
   return (
     <section className={`text-firefly-900 container ${className}`}>
       <div className="text-center mb-8 md:mb-[60px]">
-        <h2 className="text-xl leading-normal md:text-[52px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
+        <h2 className="text-xl leading-normal md:text-[40px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
           <span className="text-elf-green-700 font-bold md:font-semibold">Our Customers</span> approach our Performance
         </h2>
       </div>

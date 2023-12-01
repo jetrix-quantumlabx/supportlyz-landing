@@ -38,18 +38,18 @@ const TeamReviewCard = ({ data }: { data: ICustomerReview }) => {
             title={name}
             width={isMobile ? 32 : 90}
             height={isMobile ? 32 : 90}
-            className="rounded-full h-[32px] w-[32px] md::h-[90px] md:w-[90px] object-contain"
+            className="rounded-full h-[32px] w-[32px] md:h-[90px] md:w-[90px] object-contain"
           />
         </div>
 
-        <div className="text-sm md:text-2xl font-semibold leading-normal md:leading-[106.5%] tracking-0.1 mb-1.5 text-elf-green-700">
+        <div className="text-sm md:text-lg font-semibold leading-normal md:leading-normal tracking-0.1 mb-1.5 md:mb-6 text-elf-green-700">
           <div>{name}</div>
           {job && <div>{job}</div>}
         </div>
 
-        <div className="mb-2 md:mb-6 h-[2px] md:h-2 w-[69px] md:w-40 rounded-3xl bg-malachite-500"></div>
+        <div className="mb-2 md:mb-6 h-[2px] md:h-[7px] w-[69px] md:w-[165px] rounded-3xl bg-malachite-500"></div>
 
-        <p className="text-xs md:text-base md:font-medium leading-normal md:min-h-[79px] text-firefly-900 md:max-w-[709px]">
+        <p className="text-xs md:text-sm md:font-medium leading-normal md:min-h-[84px] text-firefly-900 md:max-w-[709px]">
           &quot;{review}&quot;
         </p>
       </div>

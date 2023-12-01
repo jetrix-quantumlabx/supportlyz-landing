@@ -25,7 +25,7 @@ interface IPricesAndPlans {
 const Feature = ({ className = '', children }: { className?: string; children: React.ReactNode }) => {
   return (
     <li
-      className={`p-4 md:py-7.5 text-[14px] md:text-[22px] leading-normal first:border-t border-b flex items-center gap-2.5 ${className}`}
+      className={`p-4 md:py-7.5 md:px-0 text-sm md:text-lg leading-normal first:border-t border-b flex items-center gap-2.5 ${className}`}
     >
       {children}
     </li>
@@ -37,19 +37,19 @@ const PriceCard = ({ data, highlight }: { data: IPricesAndPlans; highlight: bool
 
   return (
     <div
-      className={`rounded-[10px] md:rounded-[20px] p-6 pt-[19px] xxs:px-10 md:px-[73px] md:pt-9 md:pb-12 border-[3px] border-white relative overflow-hidden shadow-team-review flex flex-col items-center h-full ${
+      className={`rounded-[10px] md:rounded-[20px] p-6 pt-[19px] xxs:px-10 md:px-[73px] md:pt-[38px] md:pb-12 border-[3px] border-white relative overflow-hidden transition-all hover:shadow-customer-review flex flex-col items-center h-full ${
         highlight ? 'text-white border-opacity-0 bg-elephant-900' : 'bg-geyser-100'
       }`}
     >
-      <div className="font-medium tracking-0.1 text-center mb-4 md:mb-8">
+      <div className="font-medium tracking-0.1 text-center mb-4 md:mb-[37px]">
         <h3
-          className={`leading-normal md:leading-[50px] text-base md:text-[40px] mb-2 md:mb-4 ${
+          className={`leading-normal md:leading-[50px] text-base md:text-[25px] mb-2 ${
             highlight ? 'text-emerald-500' : 'text-elf-green-700'
           }`}
         >
           {name}
         </h3>
-        <p className="leading-normal md:leading-[50px] text-[20px] md:text-[52px]">${price}</p>
+        <p className="leading-normal md:leading-[50px] text-[20px] md:text-[40px]">${price}</p>
       </div>
 
       <ul className="mb-8 md:mb-24 z-10 w-full">
@@ -59,7 +59,7 @@ const PriceCard = ({ data, highlight }: { data: IPricesAndPlans; highlight: bool
             className={highlight ? 'border-white border-opacity-20 md:border-opacity-50' : 'border-te-papa-green'}
           >
             <span className={highlight ? 'text-emerald-500' : 'text-elf-green-700'}>
-              <CheckIcon className="text-[15px] md:text-[34.897px]" />
+              <CheckIcon className="text-[15px] md:text-[32px]" />
             </span>
             <span>{pro}</span>
           </Feature>
@@ -80,7 +80,7 @@ const PriceCard = ({ data, highlight }: { data: IPricesAndPlans; highlight: bool
 
       <a
         href={link}
-        className={`btn mt-auto text-xs md:text-lg leading-normal font-medium md:font-normal bg-emerald-500 h-[34px] md:h-[52px] w-[119px] md:w-[201px] z-10`}
+        className={`btn mt-auto text-xs md:text-sm leading-normal font-medium md:font-normal bg-emerald-500 h-[34px] md:h-[52px] w-[119px] md:w-[201px] z-10`}
       >
         Start Free Trial
       </a>
@@ -95,9 +95,9 @@ export default function PricesAndPlansSection({ className = '' }: { className?: 
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
   return (
-    <section className={`text-firefly-900 container ${className}`}>
+    <section id='price' className={`text-firefly-900 container ${className}`}>
       <div className="text-center mb-8 md:mb-[60px]">
-        <h2 className="text-xl leading-normal md:text-[52px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
+        <h2 className="text-xl leading-normal md:text-[40px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
           <span className="text-elf-green-700 font-bold md:font-semibold">Prices</span> and Plans
         </h2>
       </div>
@@ -147,14 +147,14 @@ export default function PricesAndPlansSection({ className = '' }: { className?: 
           }}
         >
           {PricesAndPlans.map((data, index: number) => (
-            <SwiperSlide key={index} /**className="!w-auto" */ className=" !h-auto">
+            <SwiperSlide key={index} /**className="!w-auto" */ className=" !h-auto pb-6">
               <PriceCard data={data} highlight={index === 1} />
             </SwiperSlide>
           ))}
         </Swiper>
 
         <SwiperPagination
-          className="mx-auto mt-6"
+          className="mx-auto"
           count={PricesAndPlans.length}
           // activeIndex={activeIndex == 0 ? 1 : activeIndex == 1 ? 2 : 0}
           activeIndex={activeIndex}

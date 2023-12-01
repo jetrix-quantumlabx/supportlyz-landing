@@ -16,15 +16,15 @@ const ProductCard = ({ name, image }: { name: string; image: string }) => {
 
 export default function SupportlyzIntegrationSection({ className = '' }: { className?: string }) {
   return (
-    <section className={`text-firefly-900 container ${className}`}>
+    <section id='integrations' className={`text-firefly-900 container ${className}`}>
       <div className="text-center mb-8 md:mb-[60px]">
-        <h2 className="text-xl leading-normal mb-4 md:text-[52px] md:leading-[50px] md:mb-5 tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
-          <span className="text-elf-green-700 font-bold md:font-semibold">Supportlyz integrates</span> with all your work tools
+        <h2 className="text-xl leading-normal md:text-[40px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
+          <span className="text-elf-green-700 font-bold md:font-semibold mt-4 md:mt-6">Supportlyz integrates</span> with all your work tools
         </h2>
         <p className="text-sm md:text-base leading-normal">Connect Tidio to dozens of ecommerce tools and platforms in less than 5 minutes.</p>
       </div>
 
-      <div className="grid gap-2.5 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:gap-x-[38px] md:gap-y-[42px] md:px-[107px]">
+      <div className="grid gap-2.5 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:gap-x-[38px] md:gap-y-[42px] md:max-w-[1507px] md:mx-auto">
         {supportedTools.map((tool) => (
           <ProductCard key={tool.name} name={tool.name} image={tool.image} />
         ))}

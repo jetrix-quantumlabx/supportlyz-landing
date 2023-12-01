@@ -11,8 +11,8 @@ import { ShapeAbstract2 } from '@/components/Landing/ShapesAbstract/ShapeAbstrac
 
 export const ProductDescription = () => {
   return (
-    <div className="relative overflow-hidden">
-      <div className="container mx-auto py-60">
+    <div id="product" className="relative overflow-hidden">
+      <div className="container mx-auto pt-[60px] md:pt-60 md:pb-48  !max-w-[1360px]">
         <ShapeAbstract1 />
         <Title />
         <DynamizingConversions />

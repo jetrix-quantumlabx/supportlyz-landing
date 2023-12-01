@@ -19,7 +19,7 @@ const SmallCard = ({
   video?: string
 }) => {
   return (
-    <div className="rounded-[10px] md:rounded-[20px] md:row-span-1 md:col-span-1 px-4 md:px-8 py-8 md:py-14 bg-elf-green-700 relative overflow-hidden">
+    <div className="rounded-[10px] md:rounded-[20px] md:row-span-1 md:col-span-1 px-4 md:px-8 py-8 md:pt-[67px] md:pb-8 bg-elf-green-700 relative overflow-hidden">
       {video && (
         <div className="rounded-[10px] md:rounded-[20px] overflow-hidden left-0 right-0 top-0 bottom-0 absolute">
           <video
@@ -31,6 +31,7 @@ const SmallCard = ({
           ></video>
         </div>
       )}
+
       {image && (
         <Image
           src={image}
@@ -41,10 +42,13 @@ const SmallCard = ({
           height={271}
         />
       )}
+
       <div className="relative z-10 max-md:flex max-md:flex-col max-md:items-center">
-        <h3 className="leading-normal text-lg md:text-3xl font-bold max-w-[240px] md:max-w-md max-md:text-center">{title}</h3>
-        <div className="my-4 h-1 md:h-1.5 w-44 md:w-28 rounded-3xl bg-malachite-500"></div>
-        <p className="leading-normal text-sm md:text-lg font-medium">{description}</p>
+        <h3 className="leading-normal text-lg md:text-[25px] font-bold max-w-[240px] md:max-w-md max-md:text-center">
+          {title}
+        </h3>
+        <div className="mt-4 mb-3.5 h-1 md:h-1.5 w-44 md:w-28 rounded-3xl bg-malachite-500"></div>
+        <p className="leading-normal text-sm font-medium">{description}</p>
       </div>
     </div>
   )
@@ -75,61 +79,40 @@ const BigCard = ({
       )}
 
       <div className="max-md:hidden">
-        <div
-          style={{ backgroundImage: 'linear-gradient(90deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-11 top-0 bottom-0"
-        ></div>
-
-        <div
-          style={{ backgroundImage: 'linear-gradient(90deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-11 top-0 bottom-0"
-        ></div>
+        {Array.from({ length: 2 }).map((_, i) => (
+          <div
+            key={i}
+            style={{ backgroundImage: 'linear-gradient(90deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
+            className="absolute left-0 right-11 top-0 bottom-0"
+          ></div>
+        ))}
       </div>
 
       <div className="md:hidden w-full absolute h-full left-0 right-0 top-0 bottom-0">
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
-        <div
-          style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
-          className="absolute left-0 right-0 top-0 h-[350px]"
-        ></div>
+        {Array.from({ length: 7 }).map((_, i) => (
+          <div
+            key={i}
+            style={{ backgroundImage: 'linear-gradient(180deg, #068374 0%, rgba(6, 131, 116, 0.00) 89.64%)' }}
+            className="absolute left-0 right-0 top-0 h-[350px]"
+          ></div>
+        ))}
       </div>
 
-      <div className='max-md:relative'>
+      <div className="max-md:relative">
         <div className="relative z-10 max-md:flex max-md:flex-col max-md:items-center">
-          <h3 className="leading-normal text-lg md:text-[40px] font-semibold max-w-[191px] md:max-w-md max-md:text-center">
+          <h3 className="leading-normal text-lg md:text-[25px] font-semibold max-w-[191px] md:max-w-md max-md:text-center">
             {title}
           </h3>
 
           <div className="my-4 h-1 md:h-1.5 w-44 md:w-28 rounded-3xl bg-malachite-500"></div>
 
-          <p className="leading-normal text-sm md:text-base lg:text-lg md:font-medium max-w-[364px] mb-4 md:mb-10 max-md:text-justify">{description}</p>
+          <p className="text-sm md:text-base lg:text-sm md:font-medium max-w-[364px] mb-4 md:mb-6 max-md:text-justify !leading-normal">
+            {description}
+          </p>
 
           <a
             href={link}
-            className={`btn mt-auto text-xs md:text-lg leading-normal bg-emerald-500 h-[44px] md:h-[52px] w-[160px] md:w-[201px] z-10 block`}
+            className={`btn mt-auto text-xs md:text-sm leading-normal bg-emerald-500 h-[44px] md:h-[52px] w-[160px] md:w-[138px] z-10 block`}
           >
             Get Started
           </a>
@@ -137,7 +120,7 @@ const BigCard = ({
 
         <div className="w-[133px] md:w-[214.7px] h-[56px] md:h-[88.793px] absolute bg-white bg-opacity-75 rounded-[6px] md:rounded-[10px] backdrop-blur-[4.93px] z-20 text-[11px] md:text-[16.443px] leading-[106.5%] p-2.5 md:pt-[23.14px] md:pl-[16.44px] max-md:bottom-[186px] max-md:top-[calc(100%+34px)] max-md:-translate-x-1/2 max-md:left-1/2 max-xl:left-[54%] xl:right-2.5 2xl:right-auto 2xl:left-[51.73469387755102%] top-[37.97586206896552%] text-firefly-900 max-md:ml-2.5">
           <div className="rounded-full bg-gradient-suportlizt-2 w-[18px] md:w-[29.598px] h-[18px] md:h-[29.598px] flex items-center justify-center left-0 md:left-[7.52px] top-[-13px] md:top-[-19.26px] absolute">
-            <SupportlyzIcon className="-scale-y-100 text-white text-[14px] md:text-[23.02]" />
+            <SupportlyzIcon className="-scale-y-100 text-white text-[14px] md:text-[23.02px]" />
           </div>
 
           <div className="opacity-70 w-[99px] md:w-[148px]">
@@ -155,14 +138,14 @@ const BigCard = ({
 
 export default function BenefitsExperienceSection({ className = '' }: { className?: string }) {
   return (
-    <section className={`text-firefly-900 container ${className}`}>
+    <section id='resources' className={`text-firefly-900 container ${className}`}>
       <div className="text-center mb-8 md:mb-[60px]">
-        <h2 className="text-xl leading-normal md:text-[52px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
+        <h2 className="text-xl leading-normal md:text-[40px] md:leading-[50px] tracking-[0.1px] max-w-[274px] mx-auto md:max-w-none">
           <span className="text-elf-green-700 font-bold md:font-semibold">More benefits,</span> better experience
         </h2>
       </div>
 
-      <div className="grid grid-rows-benefits-experience-mobile xl:grid-rows-2 xl:grid-cols-benefits-experience gap-8 md:gap-9 xl:h-[580px] text-white">
+      <div className="grid grid-rows-benefits-experience-mobile xl:grid-rows-2 xl:grid-cols-benefits-experience gap-8 md:gap-[38px] xl:h-[580px] text-white">
         <BigCard {...benefitsExperience.big} />
 
         {benefitsExperience.small.map((data, i: number) => (

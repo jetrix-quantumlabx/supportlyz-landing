@@ -17,10 +17,21 @@ const config: Config = {
             transform: 'translateY(5%)',
           },
         },
+        swipe: {
+          '0%, 100%': {
+            color: '#2AC870',
+            gap: '0px',
+          },
+          '50%': {
+            color: '#fff',
+            gap: '16px',
+          },
+        },
       },
       animation: {
         'spin-slow': 'spin 25s linear infinite',
         'bounce-slow': 'leap 8s linear infinite',
+        'swipe-slow': 'swipe 1s linear infinite',
       },
       colors: {
         geyser: {
@@ -131,8 +142,7 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'customer-review':
-          '0px 1px 2px 0px rgba(0,0,0,.02),0px 3.6px 6.9px 0px rgba(0,0,0,.04),0px 7.4px 14.1px 0px rgba(0,0,0,.04),0px 15.3px 29.2px 0px rgba(0,0,0,.06),0px 42px 80px 0px rgba(0,0,0,.08)',
+        'customer-review': '0px 15px 15px 0px rgba(43, 111, 149, 0.12)',
         'team-review': '0px 0.6px 1.5px 0px rgba(0,0,0,.04), 0px 2.1px 5.1px 0px rgba(0,0,0,.05)',
         'geyser-5': '0 10px 20px rgba(104, 134, 193, 0.05)',
         'geyser-10': '0 10px 20px rgba(104, 134, 193, 0.10)',
@@ -151,6 +161,7 @@ const config: Config = {
         'costumer-review': 'url("/static/images/landing/customer-review-bg.svg")',
         'gradient-suportlizt-1': 'linear-gradient(180deg, #01F256 0%, #14A199 100%)',
         'gradient-suportlizt-2': 'linear-gradient(180deg, #00F453 0%, #159B9E 100%)',
+        shadow: 'radial-gradient(50% 50% at 50% 50%, #000 0%, rgba(0, 0, 0, 0.00) 100%)',
       },
       margin: {
         '6.5': '1.625rem',
@@ -174,8 +185,8 @@ const config: Config = {
         'benefits-experience-mobile': '542px 200px 200px',
       },
       screens: {
-        xxs: "320px",
-      }
+        xxs: '320px',
+      },
     },
     container: {
       screens: {

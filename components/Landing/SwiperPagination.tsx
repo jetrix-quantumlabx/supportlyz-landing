@@ -147,10 +147,10 @@ const SwiperPagination = (props: ISwiperPaginationProps) => {
       setSpace(16)
       setFirstWidth(40)
     } else {
-      setWidth(59)
-      setHeight(16)
-      setSpace(24)
-      setFirstWidth(59)
+      setWidth(53.409)
+      setHeight(14.484)
+      setSpace(21.73)
+      setFirstWidth(53.409)
     }
   }, [isMobile])
 
